@@ -30,6 +30,9 @@ table = dynamodb.create_table(
 )
 ```
 
+As you might have been able to see, the structure is pretty basic, with only `pelicula_id` and `fecha_hora` acting as a composed partition key; the reason being 
+to be able to get `peliculas_id` between dates from `fecha_hora`.
+
 #### Lambda Function
 
 Copy and paste the contents of `lambda_function.py` in a newly created lambda function with a runtime of Python 3.11, though newly versions are expected to work as well.
